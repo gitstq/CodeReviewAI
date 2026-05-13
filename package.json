@@ -1,0 +1,63 @@
+{
+  "name": "codereview-ai",
+  "version": "1.0.0",
+  "description": "🤖 Intelligent AI-powered code review GitHub Action with multi-model support and static analysis integration",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "dev": "ts-node src/index.ts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/codereview-ai.git"
+  },
+  "keywords": [
+    "code-review",
+    "ai",
+    "github-action",
+    "static-analysis",
+    "security",
+    "code-quality",
+    "llm",
+    "openai",
+    "claude",
+    "gemini"
+  ],
+  "author": "CodeReviewAI Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/codereview-ai/issues"
+  },
+  "homepage": "https://github.com/yourusername/codereview-ai#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@google/generative-ai": "^0.21.0",
+    "openai": "^4.77.0",
+    "minimatch": "^9.0.5",
+    "parse-diff": "^0.11.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.10",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vercel/ncc": "^0.38.3",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
